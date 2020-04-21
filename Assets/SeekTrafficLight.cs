@@ -31,7 +31,7 @@ public class SeekTrafficLight : SteeringBehaviour
 			}
 		}
 	
-		return boid.SeekForce(target.transform.position);
+		return boid.ArriveForce(target.transform.position);
 	}
 	
 	void ChangeTarget()
