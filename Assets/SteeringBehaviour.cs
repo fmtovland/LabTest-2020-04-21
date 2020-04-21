@@ -11,11 +11,11 @@ public abstract class SteeringBehaviour:MonoBehaviour
 	public Vector3 force;
 
 	[HideInInspector]
-	public CarBoid boid;
+	public Boid boid;
 
 	public void Awake()
 	{
-		boid = GetComponent<CarBoid>();
+		boid = GetComponent<Boid>();
 	}
 
 	public abstract Vector3 Calculate();

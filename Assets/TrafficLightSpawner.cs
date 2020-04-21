@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrafficLightSpawner : MonoBehaviour
 {
+	[HideInInspector]
+	public bool ready=false;
 	public int lightCount,radius;
 	public GameObject LightPrefab;
 	public GameObject[] lights;
@@ -20,5 +22,7 @@ public class TrafficLightSpawner : MonoBehaviour
 			position=new Vector3(radius*Mathf.Cos(angle),0,radius*Mathf.Sin(angle));
 			lights[i]=Instantiate(LightPrefab,position,Quaternion.identity);
 		}
+
+		ready=true;
 	}
 }
